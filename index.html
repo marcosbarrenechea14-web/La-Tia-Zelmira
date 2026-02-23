@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Tía Zelmira - Sabores clásicos porteños</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#7A1F2F' },
+          fontFamily: {
+            heading: ['Sora', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #7A1F2F;
+      --primary-button-text-color: #FFFFFF;
+      --primary-button-hover-bg-color: #5A1722;
+      --primary-button-hover-text-color: #FFFFFF;
+      --secondary-button-bg-color: #F5EFE7;
+      --secondary-button-text-color: #7A1F2F;
+      --secondary-button-hover-bg-color: #C9A96E;
+      --secondary-button-hover-text-color: #2C1810;
+      --accent-color: #C9A96E;
+      --accent2-color: #E8D5B7;
+      --accent3-color: #9B2C3F;
+      --accent4-color: #B8956A;
+      --dark-text-color: #2C1810;
+      --gray-text-color: #7A7168;
+      --light-text-color: #FFFFFF;
+      --dark-border-color: #7A1F2F;
+      --light-border-color: #E8DDD0;
+      --dark-background-color: #2C1810;
+      --light-background-color: #FBF8F4;
+      --medium-background-color: #F5EFE7;
+      --button-padding-x: 32px;
+      --button-padding-y: 14px;
+      --font-family-body: Inter;
+      --font-family-heading: Sora;
+      --button-rounded-radius: 6px;
+    }
+  </style>
+</head>
+
+<body class="font-body">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="fixed w-full z-50 bg-[#2C1810] shadow-md code-section transition-transform duration-300 ease-in-out"
+          id="global-header"
+          data-header-hidden="false">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-24">
+        <!-- Logo -->
+        <a href="/" class="flex items-center" data-logo="true">
+          <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/299f8f4f-1886-4e23-4d62-c200afc71e00/publicContain" alt="La Tía Zelmira" class="h-28 py-2">
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center space-x-8">
+          <a href="https://latiazelmira.buenacarta.com/" target="_blank" class="text-white hover:text-[#C9A96E] font-medium transition-colors">Menú</a>
+          <a href="https://api.whatsapp.com/send/?phone=+5491128278181&text=Hola,%20me%20gustar%C3%ADa%20reservar%20una%20mesa%20para%20el%20d%C3%ADa%20___%20a%20las%20___%20hs.%20Somos%20___%20personas." target="_blank" class="text-white hover:text-[#C9A96E] font-medium transition-colors">Reservas</a>
+          <a href="#sobre-nosotros" class="text-white hover:text-[#C9A96E] font-medium transition-colors smooth-scroll">Sobre Nosotros</a>
+          <a href="#contacto" class="text-white hover:text-[#C9A96E] font-medium transition-colors smooth-scroll">Contacto</a>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="lg:hidden p-2 text-white" data-landingsite-mobile-menu-toggle="true" aria-label="Abrir menú">
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="lg:hidden hidden bg-[#2C1810] border-t border-white/10" data-landingsite-mobile-menu="true">
+      <div class="px-4 py-4 space-y-3">
+        <a href="https://latiazelmira.buenacarta.com/" target="_blank" class="block text-white font-medium py-2 border-b border-white/10">Menú</a>
+        <a href="https://wa.me/5491147761133?text=Hola,%20me%20gustar%C3%ADa%20reservar%20una%20mesa%20para%20el%20d%C3%ADa%20___%20a%20las%20___%20hs.%20Somos%20___%20personas." target="_blank" class="block text-white font-medium py-2 border-b border-white/10">Reservas</a>
+        <a href="#sobre-nosotros" class="block text-white font-medium py-2 border-b border-white/10 smooth-scroll">Sobre Nosotros</a>
+        <a href="#contacto" class="block text-white font-medium py-2 border-b border-white/10 smooth-scroll">Contacto</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 code-section" id="sh6emn">
+    <div class="absolute inset-0 z-0">
+      <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/1d6ce27a-5762-4524-e9a2-6e64dfdc5c00/public"
+           alt="Milanesa Argentina"
+           class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 bg-[#C9A96E]/20 border border-[#C9A96E]/40 rounded-full px-4 py-2 mb-6">
+          <i class="fa-solid fa-utensils text-[#C9A96E]"></i>
+          <span class="text-[#C9A96E] font-medium text-sm">Desde 1985 en Palermo</span>
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 font-[Sora] leading-tight">
+          La Tía Zelmira
+        </h1>
+
+        <p class="text-xl md:text-2xl text-gray-200 mb-8 font-light">
+          Sabores clásicos porteños desde siempre
+        </p>
+
+        <p class="text-lg text-gray-300 mb-10 max-w-2xl mx-auto">
+          Descubrí la verdadera cocina argentina: porciones abundantes, recetas
+          caseras y el warmth de un restaurante familiar en el corazón de Palermo.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="https://latiazelmira.buenacarta.com/" target="_blank"
+             class="bg-[#7A1F2F] text-white px-8 py-4 rounded-[6px] font-semibold text-lg hover:bg-[#5A1722] transition-all transform hover:scale-105 shadow-lg">
+            <i class="fa-solid fa-book-open mr-2"></i>
+            Ver Menú
+          </a>
+          <a href="https://api.whatsapp.com/send/?phone=+5491128278181&text=Hola,%20me%20gustar%C3%ADa%20reservar%20una%20mesa%20para%20el%20d%C3%ADa%20___%20a%20las%20___%20hs.%20Somos%20___%20personas."
+             target="_blank"
+             class="bg-white text-[#2C1810] px-8 py-4 rounded-[6px] font-semibold text-lg hover:bg-[#C9A96E] transition-all transform hover:scale-105 shadow-lg">
+            <i class="fa-brands fa-whatsapp mr-2"></i>
+            Reservar Mesa
+          </a>
+        </div>
+
+        <div class="mt-12 inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
+          <div class="flex items-center gap-1">
+            <i class="fa-solid fa-star text-[#C9A96E]"></i>
+            <i class="fa-solid fa-star text-[#C9A96E]"></i>
+            <i class="fa-solid fa-star text-[#C9A96E]"></i>
+            <i class="fa-solid fa-star text-[#C9A96E]"></i>
+            <i class="fa-solid fa-star-half-stroke text-[#C9A96E]"></i>
+          </div>
+          <span class="text-white font-semibold">4.3</span>
+          <span class="text-gray-400">|</span>
+          <span class="text-gray-300">+4.900 reseñas</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <i class="fa-solid fa-chevron-down text-white text-2xl opacity-70"></i>
+    </div>
+  </section>
+
+  <!-- ==================== SOBRE NOSOTROS ==================== -->
+  <section class="py-20 bg-[#FBF8F4] code-section" id="sobre-nosotros">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="relative">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+            <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/ecd85602-bef5-44ca-3cb1-9f0e2b35ea00/publicContain"
+                 alt="Restaurant ambiance"
+                 class="w-full h-[500px] object-cover">
+            <div class="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-[#7A1F2F] rounded-full flex items-center justify-center">
+                  <i class="fa-solid fa-heart text-white"></i>
+                </div>
+                <div>
+                  <p class="font-bold text-[#2C1810]">+35 años</p>
+                  <p class="text-sm text-[#7A7168]">de tradición</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-[#C9A96E] rounded-full opacity-20"></div>
+          <div class="absolute -top-4 -left-4 w-16 h-16 border-2 border-[#7A1F2F] rounded-full opacity-30"></div>
+        </div>
+
+        <div>
+          <span class="inline-block text-[#7A1F2F] font-semibold text-sm tracking-wider uppercase mb-3">
+            Sobre Nosotros
+          </span>
+          <h2 class="text-4xl md:text-5xl font-bold text-[#2C1810] mb-6 font-[Sora]">
+            La cocina de siempre,<br>
+            <span class="text-[#7A1F2F]">con el mismo amor</span>
+          </h2>
+          <p class="text-lg text-[#7A7168] mb-6 leading-relaxed">
+            En La Tía Zelmira creemos que la buena comida une a las personas.
+            Desde 1985, nuestro restaurante en el corazón de Palermo ofrece platos
+            abundantes elaborados con recetas familiares transmitidas de
+            generación en generación.
+          </p>
+          <p class="text-lg text-[#7A7168] mb-8 leading-relaxed">
+            Cada milanesa se prepara con carne fresca de primera calidad, cada
+            empanada se llena a mano y cada porción lleva el secreto de nuestra
+            familia. Vení a vivir la experiencia de comer como en casa, pero
+            mejor.
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-4 mb-8">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 bg-[#E8D5B7] rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-utensils text-[#7A1F2F]"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-[#2C1810]">Cocina Casera</h4>
+                <p class="text-sm text-[#7A7168]">Recetas tradicionales</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 bg-[#E8D5B7] rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-drumstick-bite text-[#7A1F2F]"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-[#2C1810]">Porciones Abundantes</h4>
+                <p class="text-sm text-[#7A7168]">Para compartir o disfrutar</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 bg-[#E8D5B7] rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-wine-glass text-[#7A1F2F]"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-[#2C1810]">Ambiente Cálido</h4>
+                <p class="text-sm text-[#7A7168]">Ideal para reuniones</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 bg-[#E8D5B7] rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-leaf text-[#7A1F2F]"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-[#2C1810]">Ingredientes Frescos</h4>
+                <p class="text-sm text-[#7A7168]">Calidad garantizada</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PLATOS DESTACADOS ==================== -->
+  <section class="py-20 bg-[#F5EFE7] code-section" id="platos-destacados">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="inline-block text-[#7A1F2F] font-semibold text-sm tracking-wider uppercase mb-3">
+          Nuestras Especialidades
+        </span>
+        <h2 class="text-4xl md:text-5xl font-bold text-[#2C1810] mb-4 font-[Sora]">
+          Platos Destacados
+        </h2>
+        <p class="text-lg text-[#7A7168] max-w-2xl mx-auto">
+          Las recetas más pedidas por nuestros clientes, preparadas con los
+          mejores ingredientes y el amor de siempre.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/61245ffc-6cc0-4993-d357-cb28552e4400/public"
+                 alt="Provoleta Argentina"
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-[#2C1810] mb-2 font-[Sora]">Provoleta clásica con orégano y oliva</h3>
+            <p class="text-[#7A7168] mb-4">Queso provola grillado con orégano fresco, aceitunas negras y aceite de oliva Extra Virgin.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-bold text-[#7A1F2F]">$17.000</span>
+              <a href="https://latiazelmira.buenacarta.com/" target="_blank" class="text-[#7A1F2F] hover:text-[#5A1722] font-medium">Ver más <i class="fa-solid fa-arrow-right ml-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/20c1721c-c3b7-4796-569a-f2e612105e00/public"
+                 alt="Milanesa clásica con papas fritas"
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute top-4 right-4 bg-[#C9A96E] text-[#2C1810] px-3 py-1 rounded-full text-sm font-semibold">⭐ Favorito</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-[#2C1810] mb-2 font-[Sora]">Milanesa clásica con papas fritas</h3>
+            <p class="text-[#7A7168] mb-4">Clásica milanesa de carne prime dorada golden con papas fritas crocantes. Porción abundante.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-bold text-[#7A1F2F]">$26.000</span>
+              <a href="https://latiazelmira.buenacarta.com/" target="_blank" class="text-[#7A1F2F] hover:text-[#5A1722] font-medium">Ver más <i class="fa-solid fa-arrow-right ml-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/c8485925-4e98-4f13-c5d7-9c84febce200/publicContain"
+                 alt="Risotto de calabaza"
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute top-4 right-4 bg-[#E8D5B7] text-[#2C1810] px-3 py-1 rounded-full text-sm font-semibold">🥬 Vegetariano</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-[#2C1810] mb-2 font-[Sora]">Risotto de calabaza asada</h3>
+            <p class="text-[#7A7168] mb-4">Cremoso risotto con trozos de calabaza asada, queso parmesano y hierbas frescas.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-bold text-[#7A1F2F]">$27.000</span>
+              <a href="https://latiazelmira.buenacarta.com/" target="_blank" class="text-[#7A1F2F] hover:text-[#5A1722] font-medium">Ver más <i class="fa-solid fa-arrow-right ml-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/36c65db4-6a75-40d5-b592-98807342cd00/publicContain"
+                 alt="Pechuga grillada con guarnición"
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute top-4 right-4 bg-[#E8D5B7] text-[#2C1810] px-3 py-1 rounded-full text-sm font-semibold">💪 Proteína</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-[#2C1810] mb-2 font-[Sora]">Pechuga grillada con guarnición</h3>
+            <p class="text-[#7A7168] mb-4">Pechuga de pollo jugosa con tu guarnición favorita: arroz, papas o ensalada mixta.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-bold text-[#7A1F2F]">$30.000</span>
+              <a href="https://latiazelmira.buenacarta.com/" target="_blank" class="text-[#7A1F2F] hover:text-[#5A1722] font-medium">Ver más <i class="fa-solid fa-arrow-right ml-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/ad43073e-1664-4b6a-8ba6-e4c61a317d00/public"
+                 alt="Lengua a la vinagreta"
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-[#2C1810] mb-2 font-[Sora]">Lengua a la vinagreta</h3>
+            <p class="text-[#7A7168] mb-4">Clásico plato porteño con lengua cocida y salsa vinagreta casera con perejil y ajo.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-bold text-[#7A1F2F]">$13.000</span>
+              <a href="https://latiazelmira.buenacarta.com/" target="_blank" class="text-[#7A1F2F] hover:text-[#5A1722] font-medium">Ver más <i class="fa-solid fa-arrow-right ml-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/e4dafa4b-24a8-4573-692a-74d8d4761e00/public"
+                 alt="Tiramisú artesanal"
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute top-4 right-4 bg-[#C9A96E] text-[#2C1810] px-3 py-1 rounded-full text-sm font-semibold">🍰 Postre</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-[#2C1810] mb-2 font-[Sora]">Tiramisú artesanal</h3>
+            <p class="text-[#7A7168] mb-4">Auténtico postre italiano con capas de bizcochuelo, café, mascarpone y cacao.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-bold text-[#7A1F2F]">$14.000</span>
+              <a href="https://latiazelmira.buenacarta.com/" target="_blank" class="text-[#7A1F2F] hover:text-[#5A1722] font-medium">Ver más <i class="fa-solid fa-arrow-right ml-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACTO ==================== -->
+  <section class="py-20 bg-[#FBF8F4] code-section" id="contacto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="inline-block text-[#7A1F2F] font-semibold text-sm tracking-wider uppercase mb-3">Visitanos</span>
+        <h2 class="text-4xl md:text-5xl font-bold text-[#2C1810] mb-4 font-[Sora]">Información y Ubicación</h2>
+        <p class="text-lg text-[#7A7168] max-w-2xl mx-auto">Te esperamos en nuestro restaurant en el corazón de Palermo. ¡Es fácil encontrarnos!</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <div class="space-y-8">
+          <div class="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-lg">
+            <div class="w-14 h-14 bg-[#7A1F2F] rounded-xl flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-location-dot text-white text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-[#2C1810] mb-1">Dirección</h3>
+              <p class="text-[#7A7168] mb-3">French 3015, C1425 Cdad. Autónoma de Buenos Aires</p>
+              <a href="https://www.google.com/maps/search/?api=1&query=French+3015+Buenos+Aires" target="_blank" class="inline-flex items-center text-[#7A1F2F] font-medium hover:underline">
+                <i class="fa-solid fa-arrow-right mr-2"></i>Cómo llegar
+              </a>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-lg">
+            <div class="w-14 h-14 bg-[#7A1F2F] rounded-xl flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-phone text-white text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-[#2C1810] mb-1">Teléfono</h3>
+              <p class="text-[#7A7168] mb-3">011 4776-1133</p>
+              <a href="tel:+541147761133" class="inline-flex items-center text-[#7A1F2F] font-medium hover:underline">
+                <i class="fa-solid fa-arrow-right mr-2"></i>Llamar ahora
+              </a>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-lg">
+            <div class="w-14 h-14 bg-[#7A1F2F] rounded-xl flex items-center justify-center flex-shrink-0">
+              <i class="fa-regular fa-clock text-white text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-[#2C1810] mb-1">Horarios</h3>
+              <p class="text-[#7A7168] mb-1">Lunes a Domingo:</p>
+              <p class="text-[#2C1810] font-semibold">8:00 - 01:00 (madrugada)</p>
+            </div>
+          </div>
+
+          <div class="p-6 bg-[#F5EFE7] rounded-2xl">
+            <h3 class="text-lg font-bold text-[#2C1810] mb-4">Servicios disponibles</h3>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-check-circle text-[#7A1F2F]"></i>
+                <span class="text-[#7A7168]">Consumo en el lugar</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-check-circle text-[#7A1F2F]"></i>
+                <span class="text-[#7A7168]">Reservas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden h-[500px]">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.713384956426!2d-58.39826908477069!3d-34.58439598046413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc94517352d3b%3A0x5034f70936e0c5b8!2sFrench%203015%2C%20C1425%20CABA%2C%20Argentina!5e0!3m2!1ses!2sus!4v1645564758261!5m2!1ses!2sus"
+                  width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA SECTION ==================== -->
+  <section class="py-20 bg-[#2C1810] relative overflow-hidden code-section" id="sabj5i">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-64 h-64 border border-[#C9A96E] rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 border border-[#C9A96E] rounded-full translate-x-1/2 translate-y-1/2"></div>
+      <div class="absolute top-1/2 left-1/2 w-48 h-48 bg-[#7A1F2F] rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 font-[Sora]">
+        Viví la experiencia<br>
+        <span class="text-[#C9A96E]">La Tía Zelmira</span>
+      </h2>
+      <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+        Te esperamos para compartir los sabores que nos representan desde hace más de 35 años. ¡Reservá tu mesa y viví la experiencia!
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="https://api.whatsapp.com/send/?phone=+5491128278181&text=Hola,%20me%20gustar%C3%ADa%20reservar%20una%20mesa%20para%20el%20d%C3%ADa%20___%20a%20las%20___%20hs.%20Somos%20___%20personas."
+           target="_blank"
+           class="bg-[#7A1F2F] text-white px-8 py-4 rounded-[6px] font-semibold text-lg hover:bg-[#5A1722] transition-all transform hover:scale-105 shadow-lg border-2 border-[#7A1F2F]">
+          <i class="fa-brands fa-whatsapp mr-2"></i>
+          Reservar Ahora
+        </a>
+      </div>
+
+      <div class="mt-12 flex flex-wrap justify-center gap-6">
+        <div class="flex items-center gap-2 text-gray-400">
+          <i class="fa-solid fa-star text-[#C9A96E]"></i>
+          <span>4.3 estrellas</span>
+        </div>
+        <div class="flex items-center gap-2 text-gray-400">
+          <i class="fa-solid fa-users text-[#C9A96E]"></i>
+          <span>+4.900 reseñas</span>
+        </div>
+        <div class="flex items-center gap-2 text-gray-400">
+          <i class="fa-solid fa-heart text-[#C9A96E]"></i>
+          <span>+35 años</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-[#2C1810] text-white pt-16 pb-8 code-section" id="global-footer">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="lg:col-span-1">
+          <a href="/" class="inline-block mb-4" data-logo="true">
+            <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/299f8f4f-1886-4e23-4d62-c200afc71e00/publicContain" alt="La Tía Zelmira" class="h-24">
+          </a>
+          <p class="text-gray-400 mb-6">
+            Sabores clásicos porteños desde 1985. La cocina casera que une a las familias en el corazón de Palermo.
+          </p>
+          <div class="flex gap-4">
+            <a href="https://wa.me/5491128278181" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#7A1F2F] transition-colors" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-[#C9A96E]">Enlaces Rápidos</h4>
+          <ul class="space-y-3">
+            <li><a href="https://latiazelmira.buenacarta.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">Menú</a></li>
+            <li><a href="https://api.whatsapp.com/send/?phone=+5491128278181&text=Hola,%20me%20gustar%C3%ADa%20reservar%20una%20mesa%20para%20el%20d%C3%ADa%20___%20a%20las%20___%20hs.%20Somos%20___%20personas." target="_blank" class="text-gray-400 hover:text-white transition-colors">Reservas</a></li>
+            <li><a href="#sobre-nosotros" class="text-gray-400 hover:text-white transition-colors smooth-scroll">Sobre Nosotros</a></li>
+            <li><a href="#contacto" class="text-gray-400 hover:text-white transition-colors smooth-scroll">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-[#C9A96E]">Contacto</h4>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot text-[#C9A96E] mt-1"></i>
+              <span class="text-gray-400">French 3015, C1425 CABA</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-phone text-[#C9A96E]"></i>
+              <a href="tel:+541147761133" class="text-gray-400 hover:text-white transition-colors">011 4776-1133</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-regular fa-envelope text-[#C9A96E]"></i>
+              <span class="text-gray-400">EMAIL_AQUI</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-[#C9A96E]">Horarios</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex justify-between">
+              <span>Lunes - Domingo</span>
+              <span class="text-white">8:00 - 01:00</span>
+            </li>
+          </ul>
+          <div class="mt-6 p-4 bg-white/5 rounded-xl">
+            <p class="text-sm text-gray-400 mb-2">¿Necesitás ayuda?</p>
+            <a href="mailto:EMAIL_AQUI?subject=Consulta%20desde%20la%20web%20%E2%80%93%20La%20T%C3%ADa%20Zelmira&body=Hola,%20necesito%20ayuda%20con..."
+               class="text-[#C9A96E] font-semibold hover:underline">Escríbenos</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-gray-500 text-sm">© 2026 La Tía Zelmira. Todos los derechos reservados.</p>
+          <div class="flex gap-6 text-sm">
+            <a href="#contacto" class="text-gray-400 hover:text-white transition-colors smooth-scroll">Términos</a>
+            <a href="#contacto" class="text-gray-400 hover:text-white transition-colors smooth-scroll">Privacidad</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== JAVASCRIPT (HEADER HIDE/SHOW + SMOOTH SCROLL) ==================== -->
+  <script>
+    (() => {
+      let lastScrollY = window.scrollY;
+      let header = null;
+      let isHeaderVisible = true;
+
+      const HIDE_AFTER_Y = 80; // a partir de qué scroll se oculta
+      const DELTA = 6;         // umbral anti-parpadeo
+
+      function showHeader() {
+        if (!header || isHeaderVisible) return;
+        header.style.transform = "translateY(0)";
+        header.setAttribute("data-header-hidden", "false");
+        isHeaderVisible = true;
+      }
+
+      function hideHeader() {
+        if (!header || !isHeaderVisible) return;
+        header.style.transform = "translateY(-100%)";
+        header.setAttribute("data-header-hidden", "true");
+        isHeaderVisible = false;
+      }
+
+      function handleScroll() {
+        if (!header) return;
+
+        const currentScrollY = window.scrollY;
+
+        // si estamos arriba del todo, mostramos siempre
+        if (currentScrollY <= 0) {
+          showHeader();
+          lastScrollY = currentScrollY;
+          return;
+        }
+
+        const diff = currentScrollY - lastScrollY;
+
+        // evita que tiemble por micro scrolls
+        if (Math.abs(diff) < DELTA) return;
+
+        // bajando: ocultar (solo si ya pasamos cierto punto)
+        if (diff > 0 && currentScrollY > HIDE_AFTER_Y) {
+          hideHeader();
+        }
+        // subiendo: mostrar
+        else if (diff < 0) {
+          showHeader();
+        }
+
+        lastScrollY = currentScrollY;
+      }
+
+      // mostrar header si el mouse vuelve al top (cuando está oculto)
+      function handleMouseMove(e) {
+        if (!header) return;
+        if (!isHeaderVisible && e.clientY < 100) {
+          showHeader();
+        }
+      }
+
+      function initSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            const href = this.getAttribute("href");
+            if (!href || href === "#") return;
+
+            const target = document.querySelector(href);
+            if (!target) return;
+
+            e.preventDefault();
+
+            // mostrar header antes de scrollear
+            showHeader();
+
+            setTimeout(() => {
+              target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }, 50);
+
+            // cerrar menú mobile si está abierto
+            const mobileMenu = document.querySelector("[data-landingsite-mobile-menu]");
+            if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.add("hidden");
+            }
+          });
+        });
+      }
+
+      function init() {
+        header = document.getElementById("global-header");
+        if (!header) return;
+
+        // ayuda al render en transform
+        header.style.willChange = "transform";
+
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        document.addEventListener("mousemove", handleMouseMove);
+
+        initSmoothScroll();
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
+      } else {
+        init();
+      }
+    })();
+  </script>
+
+</body>
+</html>
